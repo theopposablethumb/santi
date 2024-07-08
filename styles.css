@@ -9,11 +9,12 @@
   --purple: #9A69C0;
 }
 
+html { scroll-behavior: smooth; }
 body { font-family: "Nunito Sans", sans-serif;  background: var(--white); color: var(--charcoal); font-size: 100%; line-height: 1.6em; margin: 0; }
 
 header { background: url('images/banner.jpg'); background-size: cover; background-attachment: fixed; background-repeat: none; height: 90dvh; color: var(--black); }
 header, footer { display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap; }
-footer { flex-direction: row; padding: 1.4em 5vw; }
+footer { flex-direction: row; padding: 1.4em 5vw; justify-content: space-between; margin-top: 8em; }
 footer div {width: 70%; }
 header figure, footer figure { width: 200px; margin: 0 5vw 0 0; }
 footer figure { margin: 0; }
@@ -28,16 +29,25 @@ main > nav { flex-basis: 15vw; border-top: 1px solid var(--purple); border-botto
 h1, h2, h3 { font-weight: 600;}
 h1 {font-size: 2.6em; line-height: 1.15em; font-weight: 400; }
 h2 { font-size: 2.2em; line-height: 1.25em; text-transform: uppercase; margin: 4em 0 0.8em;}
-h3 { font-size: 1.8em; line-height: 1.4em; }
+h3 { font-size: 1.2em; line-height: 1.4em; font-weight: 800; }
 p, ul, ol { font-size: 1.2em; }
+a { color: var(--charcoal); }
+a:hover, a:focus { color: var(--purple); }
 
 header h1 { margin: 1em 0 0; }
 header p { font-weight: 400; font-size: 1.4em; margin: 0.4em 0 0; }
 
 nav { border-bottom: 1px solid var(--grey); text-align: center; }
-nav a { display: inline-block; font-weight: 700; font-size: 1em; padding: 3.6em 2.6em 3em 2.6em; }
+nav a { display: inline-block; font-weight: 700; font-size: 1em; padding: 3.6em 2.6em 3em 2.6em; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
 main > nav a { display: block; padding: 0.6em 0.2em; }
 
 figure { margin: 0; }
 figure img { width: 100%; height: auto; }
 main figure { margin: 0 0 2em 0;}
+
+.project p + figure:first-of-type { margin-top: 8em; }
+
+footer figure { width: 120px; }
+footer h3, footer h3 + p, footer p:has(a) { margin: 0.2em; }
+footer p:has(a):first-of-type { margin: 1.6em 0 0;}
